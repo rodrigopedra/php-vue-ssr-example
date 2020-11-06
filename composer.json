@@ -1,0 +1,13 @@
+{
+    "name": "rodrigo/ssr",
+    "type": "project",
+    "require": {
+        "spatie/server-side-rendering": "^0.2.6"
+    },
+    "authors": [
+        {
+            "name": "Rodrigo Pedra Brum",
+            "email": "rodrigo.pedra@gmail.com"
+        }
+    ]
+}

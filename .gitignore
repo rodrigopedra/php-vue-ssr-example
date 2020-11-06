@@ -1,0 +1,5 @@
+/.idea
+/vendor
+/node_modules
+/public/js
+mix-manifest.json
