@@ -12,8 +12,20 @@ $engine = new Node(
 
 $renderer = new Renderer($engine);
 
+// could be from a database, json file, etc.
+$people = [
+    ['id' => 1, 'name' => 'Adam'],
+    ['id' => 2, 'name' => 'Eve'],
+];
+
 $app = $renderer
     ->entry(__DIR__ . '/js/entry-server.js')
+
+    // Sharing data to hydrate entry-server.js
+    ->context('people', $people)
+
+    // If SSR fails, render this container
+    ->fallback('<div id="app"></div>')
     ->render();
 ?>
 <!DOCTYPE html>
@@ -21,9 +33,13 @@ $app = $renderer
 <head>
     <meta charset="utf-8">
     <title>SSR</title>
+    <script src="/js/entry-client.js" defer></script>
 </head>
 <body>
-<?= $app ?>
-<script src="/js/entry-client.js"></script>
+<?php echo $app; ?>
+<script>
+// Sharing data to hydrate entry-client.js
+window.people = <?php echo \json_encode($people, JSON_FORCE_OBJECT); ?>;
+</script>
 </body>
 </html>

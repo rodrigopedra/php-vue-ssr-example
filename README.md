@@ -75,6 +75,15 @@ a more complete example, with more features (including using React) at:
 
 https://github.com/spatie/laravel-server-side-rendering-examples
 
+It is very important to read the README from `spatie/server-side-rendering`:
+
+https://github.com/spatie/server-side-rendering/blob/master/README.md
+
+Specially the section on how to use `->context(...)` to share variables 
+between PHP and JavaScript:
+
+https://github.com/spatie/server-side-rendering/blob/master/README.md#contextcontext-value--null-this
+
 Lastly, don't skip reading Vue's offical docs about SSR:
 
 https://ssr.vuejs.org/

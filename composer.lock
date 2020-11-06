@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32d375037d2290822a444b7ab435691f",
+    "content-hash": "85f2aa8cbcbef641332d59bf3e08b0ed",
     "packages": [
         {
             "name": "spatie/server-side-rendering",
@@ -210,7 +210,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-json": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
 }
